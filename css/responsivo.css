@@ -1,0 +1,38 @@
+@media (max-width: 800px){
+
+  html, ul {
+    gap: 0.8rem !important;
+  }
+  .menu ul{
+    display: grid;
+    grid-template-columns: repeat(2, auto) ;
+  }
+  main {
+    padding: 0;
+  }
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+  .texto-explicativo {
+    line-height: 1.9rem;
+    text-align: center;
+    /* position: relative; */
+  }
+  h1 {
+    line-height: 2.5rem;
+  }
+  .texto-explicativo a {
+    align-self: center;
+  }
+  h1::before {
+    display: none;
+   
+  }
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+}

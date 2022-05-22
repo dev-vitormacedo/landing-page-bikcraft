@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  display: grid;
+  gap: 1.25rem;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+
+.logo {
+  max-width: 100%;
+  padding: 3.75rem;
+  display: block;
+}
+
+.menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.menu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  display: block;
+  padding: 0.94rem 1.88rem;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  border: 2px solid #fff;
+}
+.menu a:hover {
+  border: 2px solid red;
+}
+main {
+  display: grid;
+  place-items: center;
+  padding: 1.88rem;
+}
+
+.grid-container {
+  display: grid;
+  max-width: 62.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.nimbus-imagem {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.texto-explicativo {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  line-height: 1.6rem;
+  position: relative;
+  padding: 2.5rem;
+  gap: 1.25rem;
+  justify-content: center;
+  background: white;
+}
+h1::before {
+  content: "";
+  width: 3.75rem;
+  height: 0.25rem;
+  background-color: red;
+  position: absolute;
+  top: 1.88rem;
+  right: -1.8rem;
+}
+
+h1 {
+  /* display: block; */
+  font-size: 2.19rem;
+}
+p {
+  font-size: 1.25rem;
+}
+.texto-explicativo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  align-self: flex-end;
+  color: #f9f5f4;
+  background: #ee2211;
+  padding: 0.8rem 1.57rem;
+  border-radius: 0.25rem;
+}
+.texto-explicativo a:hover {
+  background: #900;
+}
+h2 {
+  font-size: 4rem;
+  text-align: right;
+  padding: 2.5rem;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  color: #c6c6c6;
+  background: url(../img/onda.svg)
+}
+.vantagens {
+  padding:  1.25rem;
+  background: white;
+}
+.vantagens li:nth-child(odd) {
+  background: #f7f7f7;
+} 
+.vantagens-item {
+  display: grid;
+  grid-template-columns: auto 1ft;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.vantagens li:hover {
+  border-left: 0.3rem solid red;
+}
+.vantagens-item p {
+  grid-column: 2;
+}
+.rodape {
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.rodape p {
+  line-height: 1.5rem;
+  font-size: small;
+}
