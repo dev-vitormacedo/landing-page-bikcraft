@@ -1,22 +1,41 @@
-* {
+:root {
+  --fundo-1: #f7f7f7;
+  --fundo-2: #ffffff;
+  --texto-1: #000000;
+  --texto-2: #222;
+  --texto-3: #c6c6c6;
+  --efeito: url(../img/onda.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo-1: #131313;
+    --fundo-2: #000000;
+    --texto-1: #ffffff;
+    --texto-2: rgb(226, 226, 226);
+    --texto-3: #f7f7f7;
+    --efeito: url(../img/onda-escura.svg);
+  }
+  }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fundo-1);
+  display: grid;
+  gap: 1.25rem;
   padding: 0;
   margin: 0;
 }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
-  display: grid;
-  gap: 1.25rem;
-}
-h1, h2, h3 {
-  margin: 0;
+h1, h2, h3, a{
+  margin: 0px;
 }
 
 .cabecalho {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 20px auto;
+  gap: 20px;
   flex-direction: column;
 }
 
@@ -36,13 +55,13 @@ h1, h2, h3 {
 .menu a{
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: var(--texto-1);
   cursor: pointer;
   display: block;
   padding: 0.94rem 1.88rem;
   border-radius: 0.25rem;
-  background: #ffffff;
-  border: 2px solid #fff;
+  background: var(--fundo-2);
+  border: 2px solid var(--fundo-2);
 }
 .menu a:hover {
   border: 2px solid red;
@@ -76,7 +95,7 @@ img {
   padding: 2.5rem;
   gap: 1.25rem;
   justify-content: center;
-  background: white;
+  background: var(--fundo-2);
 }
 h1::before {
   content: "";
@@ -89,17 +108,18 @@ h1::before {
 }
 
 h1 {
-  /* display: block; */
   font-size: 2.19rem;
+  color: var(--texto-1);
 }
 p {
   font-size: 1.25rem;
+  color: var(--texto-2);
 }
 .texto-explicativo a {
   text-decoration: none;
   text-transform: uppercase;
   align-self: flex-end;
-  color: #f9f5f4;
+  color: var(--fundo-1);
   background: #ee2211;
   padding: 0.8rem 1.57rem;
   border-radius: 0.25rem;
@@ -114,15 +134,18 @@ h2 {
   display: flex;
   margin: 0 auto;
   align-items: center;
-  color: #c6c6c6;
-  background: url(../img/onda.svg)
+  color: var(--texto-3);
+  background: var(--efeito);
 }
 .vantagens {
   padding:  1.25rem;
-  background: white;
+  background: var(--fundo-2);
+}
+h3 {
+  color: var(--texto-1);
 }
 .vantagens li:nth-child(odd) {
-  background: #f7f7f7;
+  background: var(--fundo-1);
 } 
 .vantagens-item {
   display: grid;
@@ -140,7 +163,7 @@ h2 {
 .rodape {
   text-align: center;
   padding: 2.5rem;
-  background-color: #ffffff;
+  background-color: var(--fundo-2);
   box-sizing: border-box;
 }
 .rodape p {

@@ -4,8 +4,9 @@
     gap: 0.8rem !important;
   }
   .menu ul{
-    display: grid;
-    grid-template-columns: repeat(2, auto) ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   main {
     padding: 0;
@@ -18,7 +19,6 @@
   .texto-explicativo {
     line-height: 1.9rem;
     text-align: center;
-    /* position: relative; */
   }
   h1 {
     line-height: 2.5rem;
@@ -28,7 +28,6 @@
   }
   h1::before {
     display: none;
-   
   }
   h2 {
     font-size: 3rem;
